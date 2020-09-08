@@ -2,13 +2,6 @@ import numpy as np
 import sys
 sys.setrecursionlimit(90000000)
 
-matrix_size = 8
-valor_maximo = 6
-
-matriz1_strassen = np.random.randint(0,valor_maximo, size=(matrix_size,matrix_size), dtype=np.longlong) # Gera matriz1 com numeros aleatorios de 0 a 10001
-matriz2_strassen = np.random.randint(0,valor_maximo, size=(matrix_size,matrix_size), dtype=np.longlong) # Gera matriz2 com numeros aleatorios de 0 a 10001
-resultado_strassen = np.random.randint(0,1, size=(matrix_size,matrix_size), dtype=np.longlong) #Gera matriz resultado inicialmente com valores 0
-
   
 def soma_matriz(matriz1,matriz2):
     print(matriz1)
@@ -41,6 +34,16 @@ def divide_matriz(matriz,matrix_size):
     bd = np.reshape(base_direito,(-1,matrix_size//2))
 
     return te,be,td,bd
+
+
+
+matrix_size = 8
+valor_maximo = 6
+
+matriz1_strassen = np.random.randint(0,valor_maximo, size=(matrix_size,matrix_size), dtype=np.longlong) # Gera matriz1 com numeros aleatorios de 0 a 10001
+matriz2_strassen = np.random.randint(0,valor_maximo, size=(matrix_size,matrix_size), dtype=np.longlong) # Gera matriz2 com numeros aleatorios de 0 a 10001
+resultado_strassen = np.random.randint(0,1, size=(matrix_size,matrix_size), dtype=np.longlong) #Gera matriz resultado inicialmente com valores 0
+
 
 # print(soma_matriz(matriz1_strassen,matriz2_strassen))   
 # print(subtrai_matriz(matriz1_strassen,matriz2_strassen))
