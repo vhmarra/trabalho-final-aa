@@ -69,6 +69,7 @@ def rodar():
 
     start = time()
     while contador <= numero_testes:
+        start_parcial = time()
         matrix_size = tamanho_matriz_input
         valor_maximo = 10001
         matriz1_strassen = np.random.randint(0,valor_maximo, size=(matrix_size,matrix_size), dtype=np.longlong) # Gera matriz1 com numeros aleatorios de 0 a 10001
@@ -79,7 +80,11 @@ def rodar():
         print("\n")
         multiplica = multiplica_strassen(matriz1_strassen,matriz2_strassen)
         print(multiplica)
+        end_parcial = time()
+        tempo_parcial = end_parcial - start_parcial
         contador+=1
+        print('tempo parcial em segundos:', tempo_parcial)
+        
     end = time()
     tempo = end - start
     print('tempo total de execução em segundos:',tempo)

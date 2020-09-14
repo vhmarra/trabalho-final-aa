@@ -1,7 +1,6 @@
 import numpy as np
 from time import sleep, time
-import matplotlib.pyplot as plt
-import pandas as pd
+
 
 
 
@@ -13,6 +12,7 @@ def multiplica_matriz():
     contador = 1
     start = time()
     while contador <= numero_testes:
+        start_parcial = time()
         matrix_size = tamanho_matriz_input
         valor_maximo = 10000
 
@@ -34,6 +34,9 @@ def multiplica_matriz():
                 for index3 in range(len(matriz2)):
                     resultado[index][index2] += matriz1[index][index3] * matriz2[index3][index2]
 
+        end_parcial = time()
+        tempo_parcial = end_parcial - start_parcial
+        print('tempo parcial em segundos:', tempo_parcial)
         print("resultado=")
         print(resultado)
         contador += 1
