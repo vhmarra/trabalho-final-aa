@@ -13,13 +13,13 @@ def multiplica_matriz():
     start = time()
     while contador <= numero_testes:
         start_parcial = time()
-        matrix_size = tamanho_matriz_input
+        matriz_tamanho = tamanho_matriz_input
         valor_maximo = 10000
 
         #GERA MATRIZES ALEATORIAS DE TAMANHO = matriz_size
-        matriz1 = np.random.randint(0,valor_maximo, size=(matrix_size,matrix_size), dtype=np.longlong) # Gera matriz1 com numeros aleatorios de 0 a 10001
-        matriz2 = np.random.randint(0,valor_maximo, size=(matrix_size,matrix_size), dtype=np.longlong) # Gera matriz2 com numeros aleatorios de 0 a 10001
-        resultado = np.random.randint(0,1, size=(matrix_size,matrix_size), dtype=np.longlong) #Gera matriz resultado inicialmente com valores 0 
+        matriz1 = np.random.randint(0,valor_maximo, size=(matriz_tamanho,matriz_tamanho), dtype=np.longlong) # Gera matriz1 com numeros aleatorios de 0 a 10001
+        matriz2 = np.random.randint(0,valor_maximo, size=(matriz_tamanho,matriz_tamanho), dtype=np.longlong) # Gera matriz2 com numeros aleatorios de 0 a 10001
+        resultado = np.random.randint(0,1, size=(matriz_tamanho,matriz_tamanho), dtype=np.longlong) #Gera matriz resultado inicialmente com valores 0 
 
         print("matriz=\n", matriz1) 
         print("\n")
