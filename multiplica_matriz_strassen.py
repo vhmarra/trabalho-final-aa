@@ -37,7 +37,7 @@ def multiplica_strassen(matriz1,matriz2):
     if tamanho_matriz(matriz1) == (2,2):
         return np.matmul(matriz1,matriz2)
 
-    #divide as matrizes em submatrizes de tamanho = matrix_size//2
+    #divide as matrizes em submatrizes de tamanho = matriz_tamanho//2
     A, B, C, D = divide_matriz(matriz1)
     E, F, G, H = divide_matriz(matriz2)
 
@@ -70,10 +70,10 @@ def rodar():
     start = time()
     while contador <= numero_testes:
         start_parcial = time()
-        matrix_size = tamanho_matriz_input
+        matriz_tamanho = tamanho_matriz_input
         valor_maximo = 10001
-        matriz1_strassen = np.random.randint(0,valor_maximo, size=(matrix_size,matrix_size), dtype=np.longlong) # Gera matriz1 com numeros aleatorios de 0 a 10001
-        matriz2_strassen = np.random.randint(0,valor_maximo, size=(matrix_size,matrix_size), dtype=np.longlong) # Gera matriz2 com numeros aleatorios de 0 a 10001
+        matriz1_strassen = np.random.randint(0,valor_maximo, size=(matriz_tamanho,matriz_tamanho), dtype=np.longlong) # Gera matriz1 com numeros aleatorios de 0 a 10001
+        matriz2_strassen = np.random.randint(0,valor_maximo, size=(matriz_tamanho,matriz_tamanho), dtype=np.longlong) # Gera matriz2 com numeros aleatorios de 0 a 10001
         print("matriz=\n", matriz1_strassen) 
         print("\n")
         print("matriz2=\n", matriz2_strassen) 
